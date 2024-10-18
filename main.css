@@ -708,10 +708,16 @@ padding:2.5rem;
     background-color: #606068;
 }
 
+
+
 .paid-btn {
     background-color: var(--bg-blue);
     color: white;
     border-radius: 10px;
+}
+
+.paid-btn:hover {
+    background-color:#5234c0;
 }
 
 
