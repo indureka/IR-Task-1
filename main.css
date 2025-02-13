@@ -40,9 +40,9 @@ nav {
     align-items: center;
     background-color: transparent;
     color: var(--white-color);
-    position: sticky;
+    /* position: sticky; */
     top: 0;
-    z-index: 10000000;
+    /* z-index: 10000000; */
     background: linear-gradient(135deg, var(--bg-black), var(--bg-blue));
 }
 
@@ -84,6 +84,58 @@ nav .logo{
     background-color: #644afc;
     border-color: whitesmoke;
 }
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    nav {
+      padding: 10px 20px;
+    }
+  
+    .nav-menus {
+      gap: 20px;
+      font-size: calc(var(--font-button) - 2px);
+    }
+  
+    .nav-btn {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    nav .logo {
+      margin-bottom: 5px;
+    }
+  
+    .nav-menus {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .nav-menus > h4 {
+      padding: 6px 12px;
+    }
+  
+    .nav-btn {
+      font-size: 14px;
+      padding: 6px 10px;
+      margin-right: 0;
+    }
+  }
+
+
+  /* ******************************************************************************************** */
 
 /* main section */
 
@@ -248,6 +300,69 @@ main{
     font-size: 1.5rem;
 }
 
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .first-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+  
+    .first-container > div {
+      width: 80%;
+      margin: 15px 0;
+    }
+  
+    .first-container > div > div > h1 {
+      font-size: 32px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .first-container > div > div > p {
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .right-side {
+      width: 80%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .first-container {
+      padding: 1.5rem 0.5rem;
+    }
+  
+    .first-container > div {
+      width: 95%;
+      margin: 10px 0;
+    }
+  
+    .first-container > div > div > h1 {
+      font-size: 28px;
+    }
+  
+    .first-container > div > div > p {
+      font-size: 14px;
+    }
+  
+    .right-side {
+      width: 95%;
+      padding: 0.5rem;
+    }
+  }
+
+
+  /* *********************************************************************************************** */
+
 /* carousel section */
 
 .review-carousel {
@@ -307,6 +422,59 @@ main{
     text-align: left;
     font-size: 12px;
 }
+
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .review-carousel {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .carousel-item {
+      width: 80%;
+      margin: 0 auto;
+      padding: 15px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .review-carousel {
+      padding: 10px;
+    }
+  
+    .carousel-item {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .carousel-item h4 {
+      font-size: 16px;
+    }
+  
+    .carousel-item p {
+      font-size: 14px;
+    }
+  
+    .user-info img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .user-info h6 {
+      font-size: 10px;
+    }
+  
+    .user-info p {
+      font-size: 10px;
+    }
+  }
+  /* *********************************************************************************************** */
+
 
 /* learn section */
 
@@ -422,6 +590,85 @@ main{
     font-weight: bold;
 }
 
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .learn-container,
+    .book-chapters,
+    .preview-container {
+      padding: 1.5rem;
+      width: 95%;
+      gap: 30px;
+    }
+  
+    .learn-box1,
+    .book-box1,
+    .test-box1,
+    .preview-box1 {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .empty-box {
+      display: none; /* Hide the empty box on smaller screens */
+    }
+  
+    .content-box,
+    .about-box1 {
+      padding: 15px;
+    }
+  
+    .content-box h2,
+    .about-box1 h2 {
+      font-size: calc(var(--font-title) - 8px);
+    }
+  
+    .learn-box2 {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .icon-box,
+    .i-box {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .learn-container,
+    .book-chapters,
+    .preview-container {
+      padding: 1rem;
+      gap: 20px;
+    }
+  
+    .content-box h2,
+    .about-box1 h2 {
+      font-size: calc(var(--font-title) - 12px);
+    }
+  
+    .content-box p,
+    .about-box1 p {
+      font-size: 14px;
+    }
+  
+    .icon-box h4,
+    .i-box h4 {
+      font-size: 16px;
+    }
+  
+    .icon-box p,
+    .i-box p {
+      font-size: 14px;
+    }
+  }
+
+  /* *********************************************************************************************** */
+
+
 /* about section */
 
 .about-author {
@@ -468,6 +715,57 @@ main{
     color:var(--text-color);
 }
 
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .about-author {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      height: auto; /* Adjust height */
+    }
+  
+    .about-box1 {
+      width: 80%;
+      padding: 15px;
+    }
+  
+    .about-box2 {
+      width: 80%;
+      padding: 2rem;
+    }
+  
+    .review-text {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .about-author {
+      padding: 1rem;
+    }
+  
+    .about-box1 {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    .about-box2 {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    .review-text {
+      font-size: 14px;
+    }
+  }
+
+  /* *********************************************************************************************** */
+
+
 /* book section */
 
 .book-box2 {
@@ -493,6 +791,39 @@ main{
     row-gap: 15px;                     
 }
 
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .book-box2 {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+      grid-template-rows: repeat(4, auto); /* Adjust rows */
+      height: auto; /* Adjust height */
+    }
+  
+    .i-box {
+      width: 95%; /* Adjust width */
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .book-box2 {
+      grid-template-columns: 1fr; /* Single column on mobile */
+      grid-template-rows: repeat(8, auto); /* Adjust rows */
+      gap: 5px; /* Reduce gap */
+      padding: 5px; /* Reduce padding */
+    }
+  
+    .i-box {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+
+
+  /* *********************************************************************************************** */
+
+
 /* preview section */
 
 .preview-container{
@@ -512,6 +843,39 @@ main{
     width:30%;
     object-fit: contain;
 }
+
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .preview-box2 {
+      flex-direction: column; /* Stack image and content */
+      align-items: flex-start; /* Align content to the left */
+      width: 95%; /* Full width */
+      padding: 1rem; /* Reduce padding */
+    }
+  
+    .image-box {
+      width: 80%; /* Make image wider on tablet */
+      margin-bottom: 1rem; /* Add spacing */
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .preview-box2 {
+      padding: 0.5rem; /* Further reduce padding */
+    }
+  
+    .image-box {
+      width: 100%; /* Image takes full width on mobile */
+    }
+  }
+
+
+  /* *********************************************************************************************** */
+
 
 /* testimonial section */
 
@@ -614,6 +978,52 @@ main{
     font-size: var(--font-text);
     border:1px solid rgb(192, 181, 181);
 }
+
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .testimonial {
+      padding: 1rem;
+    }
+  
+    .test-box2 {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-template-rows: auto;
+      gap: 15px;
+    }
+  
+    .test-item {
+      width: 90%;
+      height: auto;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .test-box2 {
+      grid-template-columns: 1fr; /* Single column */
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+  
+    .test-item {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .test-item p {
+      font-size: 12px;
+    }
+  
+    .profile h6 {
+      font-size: 12px;
+    }
+  }
+
+  /* *********************************************************************************************** */
+
 
 /* price-section */
 
@@ -750,6 +1160,64 @@ padding:2.5rem;
     
 }
 
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .price-container {
+      padding: 1.5rem;
+    }
+  
+    .top-container h4 {
+      font-size: 1.75rem;
+    }
+  
+    .top-container p {
+      width: 70%;
+    }
+  
+    .bottom-container {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .price-box2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .price-container {
+      padding: 1rem;
+    }
+  
+    .top-container h4 {
+      font-size: 1.5rem;
+    }
+  
+    .top-container p {
+      width: 90%;
+    }
+  
+    .price-details h2 {
+      font-size: 1.2rem;
+    }
+  
+    .price-details p {
+      font-size: 0.9rem;
+    }
+  
+    .features h6 {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* *********************************************************************************************** */
+
+
 /* FAQ section */
 
 .faq-container{
@@ -807,6 +1275,41 @@ padding:2.5rem;
     transform: rotate(180deg); 
 }
 
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .qa-container {
+      width: 80%;
+      padding: 1.5rem;
+    }
+  
+    .faq-item p {
+      font-size: 13px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .qa-container {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    .faq-item p {
+      font-size: 12px;
+    }
+  
+    .faq-answer {
+      padding: 0.5rem 0;
+    }
+  }
+
+
+  /* *********************************************************************************************** */
+
+
 /* footer section */
 
 footer{
@@ -820,104 +1323,30 @@ footer{
     font-size: var(--font-text);
     color:var(--text-color);
 }
+/* Responsive Styles */
 
-
-
-/* Responsive adjustments for nav bar */
+/* Tablet Styles */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 10px;
+    footer {
+      padding: 1.5rem;
     }
-
-    .nav-menus {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+  
+    footer p {
+      font-size: calc(var(--font-text) - 2px);
     }
-}
-
-
-/* Responsive adjustments for first container */
-@media (max-width: 768px) {
-    .first-container {
-        flex-direction: column;
-        align-items: center;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    footer {
+      padding: 1rem;
     }
-}
-
-
-/* Responsive adjustments for reviews section */
-@media (max-width: 768px) {
-    .reviews-section {
-        flex-direction: column;
-        align-items: flex-start;
+  
+    footer p {
+      font-size: 14px;
+      text-align: center; /* Center text on mobile */
     }
-}
+  }
 
-
-/* Responsive adjustments for testimonial section */
-@media (max-width: 768px) {
-    .testimonial {
-        padding: 1rem;
-    }
-
-    .test-box2 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .test-item {
-        width: 100%;
-    }
-}
-
-
-/* Responsive adjustments for price section */
-@media (max-width: 768px) {
-    .price-container {
-        padding: 1rem;
-        height: auto;
-    }
-
-    .bottom-container {
-        flex-direction: column;
-    }
-
-    .price-box1, .price-box2 {
-        margin-bottom: 1rem;
-    }
-}
-
-
-/* Responsive adjustments for FAQ section */
-@media (max-width: 768px) {
-    .qa-container {
-        width: 90%;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    :root {
-        --font-title: 28px; 
-        --font-text: 14px;  
-        --font-button: 12px;  
-    }
-
-    nav {
-        padding: 10px;
-    }
-
-    .first-container {
-        padding: 1rem;
-    }
-
-    .learn-container, .book-chapters, .preview-container {
-        padding: 1rem;
-    }
-
-    .about-author {
-        flex-direction: column;
-    }
-}
+/* 
+  ****************************************************************************************** */
